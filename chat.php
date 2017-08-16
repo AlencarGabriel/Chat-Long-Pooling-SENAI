@@ -1,3 +1,6 @@
+<?php 
+// header('Link: <http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css>; rel=preload; as=style, <scripts/js/chat.js>; rel=preload; as=script'); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +8,7 @@
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>Simple Chat - Bootsnipp.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="scripts/css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
     <meta http-equiv="refresh" content="300"> <!-- 5 minutos -->
     
@@ -120,10 +122,8 @@
         color: #d4d4d4;
     }   
 </style>
-<!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
-<script src="scripts/js/jquery-3.2.1.min.js"></script>
-<!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
-<script src="scripts/js/bootstrap.min.js"></script>     
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
     <!DOCTYPE html>

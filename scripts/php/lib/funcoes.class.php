@@ -37,8 +37,6 @@ public static function ExecutePDO($QUERY_SQL, $QUEBRAR_QUERY = false){
 			return self::ExecutaSQL($QUERY_SQL, $pdo);
 		}
 
-		// flush();
-
 		// $pdo->commit();
 		// $pdo->setAttribute(PDO::ATTR_AUTOCOMMIT, 1);
 
@@ -126,8 +124,8 @@ public static function LongPooling($id, $sqlModificacao, $funcao){
 
 	// Este loop será o responsável por manter a conexão aberta com o servidor
 	while (true) {
-		if (self::ExisteModificacao($id, $retornoTimestamp, $sqlModificacao)){			
-				return $funcao($retornoTimestamp, $id); // chama a função que fará as requisições necessárias para entregar ao JS
+		if (self::ExisteModificacao($id, $retornoID, $sqlModificacao)){			
+				return $funcao($retornoID, $id); // chama a função que fará as requisições necessárias para entregar ao JS
 			}else{
 				sleep(5);
 				continue;

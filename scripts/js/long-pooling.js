@@ -1,13 +1,14 @@
-function getContentMessage(timestamp)
+function getContentMessage(callbackID)
 {
     var 
-    queryString = {'timestamp' : timestamp};  
-    letter = '';
+    queryString = {'callbackID' : callbackID},  
+    letter = '',
+    global_name = getCookie("global_name");
 
     $.get('scripts/php/api/getMessage.php', queryString, function(data)
     {
         var responseJSON = JSON.parse(data).messages;
-        var resonseTimeStamp = JSON.parse(data).timestamp;
+        var resonseCallbackID = JSON.parse(data).callbackID;
 
         var obj = responseJSON;
 
@@ -22,6 +23,6 @@ function getContentMessage(timestamp)
             $('#chat').scrollTop($('ul').height());
         }
 
-        getContentMessage(resonseTimeStamp);
+        getContentMessage(resonseCallbackID);
     });
 }

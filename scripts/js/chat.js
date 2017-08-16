@@ -1,5 +1,5 @@
 var 
-avatar = '';
+avatar = '',
 global_name = getCookie("global_name");
 
 function formatAMPM(date) {
@@ -16,7 +16,7 @@ function formatAMPM(date) {
 //-- No use time. It is a javaScript effect.
 function insertChat(who, obj, avatar, time = 0){
     var control = "";
-    var date = formatAMPM(new Date());
+    // var date = formatAMPM(new Date());
 
     if (who == "me"){
 
@@ -80,7 +80,7 @@ $(".mytext").on("keyup", function(e){
     if (e.which == 13){
         var text = $(this).val();
         if (text !== ""){
-            Send(text, global_name == "" ? 'null' : global_name);
+            Send(text, global_name == "" ? '' : global_name);
             $(this).val('');
         }
     }
@@ -89,21 +89,15 @@ $(".mytext").on("keyup", function(e){
 //-- Clear Chat
 resetChat();
 
-//-- Print Messages
-// insertChat("me", "Hello Tom...", 0);  
-// insertChat("you", "Hi, Pablo", 1500);
-// insertChat("me", "What would you like to talk about today?", 3500);
-// insertChat("you", "Tell me a joke",7000);
-// insertChat("me", "Spaceman: Computer! Computer! Do we bring battery?!", 9500);
-// insertChat("you", "LOL", 12000);
-
 $(document).ready(function()
 {
-    getContentMessage();
+
     if (getCookie("global_name") == "null" || getCookie("global_name") == "") {
         setCookie("global_name", prompt("Informe o seu nome:", ""), 1);
     }
 
+    getContentMessage();
+    
     $('.mytext').focus();
 });
 
